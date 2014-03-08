@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "Iconic History",
+  "description": "Visualize your browser history with favicons.",
+  "version": "1.0",
+
+  "permissions": [
+    "chrome://favicon/",
+    "history"
+  ],
+  "background": {
+    "persistent": true,
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_icon": "images/icon.png"
+  }
+}
