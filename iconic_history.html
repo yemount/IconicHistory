@@ -3,8 +3,12 @@
   <head>
     <title>Iconic History</title>
     <style>
+    @font-face{
+      font-family: Quicksand;
+      src: url(fonts/Quicksand-Regular.otf);
+    }
     body{
-      font-family: "Courier New";
+      font-family: Quicksand;
       min-width: 800px;
     }
     .faviconDiv{
@@ -13,6 +17,8 @@
 		.favicon{
 			width: 16px;
 			height: 16px;
+      margin-top: 4px;
+      margin-bottom: -4px;
 			z-index: 0;
 		}
     .faviconTitle{
@@ -23,23 +29,20 @@
     .dateDiv{
       background-color: black;
       color: white;
-        padding-left: 8px;
-        padding-right: 8px;
-      display: inline;
-      font-size: 12pt;
-      height: 32px;
-      max-height: 32px;
-      max-width: 128px;
-      width: 128px;
+      padding-left: 8px;
+      padding-right: 8px;
+      display: inline-block;
+      font-size: 11pt;
+      height: 18px;
+      width: 80px;
     }
     #title{
       position: fixed;
       top: 0px; 
       left: 0px;
-      right: 12px;
+      right: 10px;
       display: block;
       background: white;
-      border: 2px solid;
       z-index: 1;
       display: inline;
     }
@@ -59,25 +62,30 @@
       width: 16px;
       height: 16px;
       padding-top: 2px;
-      margin-bottom: -3px;
+      margin-bottom: -1px;
+    }
+    .tableIconLong{
+      width: 48px;
+      height: 16px;
+      padding-top: 2px;
+      margin-left: -2px;
+      margin-bottom: -1px;
     }
     a:link {text-decoration: none;}      /* unvisited link */
     a:visited {text-decoration: none;}  /* visited link */
     a:hover {text-decoration: none;}  /* mouse over link */
     a:active {text-decoration: none;}  /* selected link */
-    .tableSpanSelected{
-      color: #000000;
+    .toggleSelected{
+      opacity: 1;
     }
-    .tableSpanDeselected{
-      margin-left: 2px;
-      margin-right: 2px;
-      color: #cccccc;
+    .toggleDeselected{
+      opacity: 0.2;
     }
     #topFavicons{
       display: inline;
     }
     #faviconHolder{
-      margin-top: 24px;
+      margin-top: 16px;
     }
     </style>
     <script src="js/jquery.js"></script>
@@ -88,14 +96,12 @@
     <div id="title" style="margin-left: 8px;">
       <img src="images/icon-home-b.png" class="tableIcon"/> Iconic History 
       <div id="titleFilters">
-        <img src="images/icon-filter-b.png" class="tableIcon"/> Filters: 
-        <img src="images/icon-most-visited-b.png" class="tableIcon"/>
+        <img src="images/icon-filter-b.png" class="tableIcon"/>: 
         <div id="topFavicons"> Loading... </div>
-        <img src="images/icon-clock-b.png" class="tableIcon"/>
-          <a href="#" class="tableSpanSelected" id="link0">0-6,</a>
-          <a href="#" class="tableSpanSelected" id="link1">6-12,</a>
-          <a href="#" class="tableSpanSelected" id="link2">12-18,</a>
-          <a href="#" class="tableSpanSelected" id="link3" style="margin-right: 16px;">18-24</a>
+          <a href="#" class="toggleDeselected" id="0_ih_t_time"><img src="images/icon-0-6.png" class="tableIconLong"/></a>
+          <a href="#" class="toggleDeselected" id="1_ih_t_time"><img src="images/icon-6-12.png" class="tableIconLong"/></a>
+          <a href="#" class="toggleDeselected" id="2_ih_t_time"><img src="images/icon-12-18.png" class="tableIconLong"/></a>
+          <a href="#" class="toggleDeselected" id="3_ih_t_time" style="margin-right: 4px;"><img src="images/icon-18-24.png" class="tableIconLong"/></a>
       </div>
     </div>
     <div id="faviconHolder"></div>
