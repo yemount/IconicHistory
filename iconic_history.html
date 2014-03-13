@@ -3,8 +3,11 @@
   <head>
     <title>Iconic History</title>
     <style>
-    	.faviconDiv{
-			position: relative;
+    body{
+      font-family: "Courier New";
+      min-width: 800px;
+    }
+    .faviconDiv{
 			display: inline;
 		}
 		.favicon{
@@ -12,8 +15,12 @@
 			height: 16px;
 			z-index: 0;
 		}
+    .faviconTitle{
+      margin-bottom: -3px;
+      width: 16px;
+      height: 16px;
+    }
     .dateDiv{
-      font-family: "Courier New";
       background-color: black;
       color: white;
         padding-left: 8px;
@@ -25,11 +32,72 @@
       max-width: 128px;
       width: 128px;
     }
+    #title{
+      position: fixed;
+      top: 0px; 
+      left: 0px;
+      right: 12px;
+      display: block;
+      background: white;
+      border: 2px solid;
+      z-index: 1;
+      display: inline;
+    }
+    #titleFilters{
+      float: right;
+    }
+    .tableTitle{
+      background-color: black;
+      color: white;
+    }
+    .tableContent{
+      background-color: black;
+      color: white;
+      font-size: 12pt;
+    }
+    .tableIcon{
+      width: 16px;
+      height: 16px;
+      padding-top: 2px;
+      margin-bottom: -3px;
+    }
+    a:link {text-decoration: none;}      /* unvisited link */
+    a:visited {text-decoration: none;}  /* visited link */
+    a:hover {text-decoration: none;}  /* mouse over link */
+    a:active {text-decoration: none;}  /* selected link */
+    .tableSpanSelected{
+      color: #000000;
+    }
+    .tableSpanDeselected{
+      margin-left: 2px;
+      margin-right: 2px;
+      color: #cccccc;
+    }
+    #topFavicons{
+      display: inline;
+    }
+    #faviconHolder{
+      margin-top: 24px;
+    }
     </style>
+    <script src="js/jquery.js"></script>
     <script src='iconic_history.js'></script>
   </head>
 
   <body>
+    <div id="title" style="margin-left: 8px;">
+      <img src="images/icon-home-b.png" class="tableIcon"/> Iconic History 
+      <div id="titleFilters">
+        <img src="images/icon-filter-b.png" class="tableIcon"/> Filters: 
+        <img src="images/icon-most-visited-b.png" class="tableIcon"/>
+        <div id="topFavicons"> Loading... </div>
+        <img src="images/icon-clock-b.png" class="tableIcon"/>
+          <a href="#" class="tableSpanSelected" id="link0">0-6,</a>
+          <a href="#" class="tableSpanSelected" id="link1">6-12,</a>
+          <a href="#" class="tableSpanSelected" id="link2">12-18,</a>
+          <a href="#" class="tableSpanSelected" id="link3" style="margin-right: 16px;">18-24</a>
+      </div>
+    </div>
     <div id="faviconHolder"></div>
   </body>
 </html>
