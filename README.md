@@ -3,6 +3,7 @@
 Iconic History is a Chrome extensions that visualizes your browser history as a favicon stack. It creates a favicon for each url you visited, and then compiles all favicons into a huge sequence based on access time. You can not only see all history in the past four months in a page, but also identify personal browsing habits through the straightforward visual presentation of your online life.
 
 Checkout video @ https://vimeo.com/89219632
+
 blogpost @ http://golancourses.net/2014/shan/03/06/project-3-shan-browser-history-visualization/
 
 ####How to install: 
